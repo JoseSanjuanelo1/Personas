@@ -34,26 +34,27 @@ public class Registro extends AppCompatActivity {
 
     public void registrar (View v){
 
-        String nombre, apellido, aux="";
-        int ed;
-        nombre = nomb.getText().toString().trim();
-        apellido = apell.getText().toString().trim();
-        ed = Integer.parseInt(edad.getText().toString().trim());
+        if(validar()){
+            String nombre, apellido, aux="";
+            int ed;
+            nombre = nomb.getText().toString().trim();
+            apellido = apell.getText().toString().trim();
+            ed = Integer.parseInt(edad.getText().toString().trim());
 
-        if(basket.isChecked()) aux= res.getString(R.string.bk);
+            if(basket.isChecked()) aux= res.getString(R.string.bk);
 
-        if(estudio.isChecked()) aux = aux+", "+res.getString(R.string.estudiar);
+            if(estudio.isChecked()) aux = aux+", "+res.getString(R.string.estudiar);
+
+            if (internet.isChecked()) aux = aux+ ", "+res.getString(R.string.internet);
 
 
-        if (internet.isChecked()) aux = aux+ ", "+res.getString(R.string.internet);
+            Persona p = new Persona(nombre, apellido, ed, aux);
+            p.guardar();
 
-
-        Persona p = new Persona(nombre, apellido, ed, aux);
-        p.guardar();
-
-        //msj.setText(res.getString(R.string.mensaje));
-        new AlertDialog.Builder(this).setMessage(res.getString(R.string.mensaje)).show();
-        limpiar();
+            //msj.setText(res.getString(R.string.mensaje));
+            new AlertDialog.Builder(this).setMessage(res.getString(R.string.mensaje)).show();
+            limpiar();
+        }
 
     }
 
