@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Peoples</string>
+    <string name="apellido">Lastname</string>
+    <string name="bk">Basketball</string>
+    <string name="borrar">Clear</string>
+    <string name="edad">Age</string>
+    <string name="estudiar">Study</string>
+    <string name="hobbie">Hobbie</string>
+    <string name="internet">Internet</string>
+    <string name="listar">To List</string>
+    <string name="nombre">Name</string>
+    <string name="numero">No.</string>
+    <string name="registrar">To Register</string>
+    <string name="registro">Registry</string>
+    <string name="mensaje">You have successfully registered</string>
+    <string name="error_1">Please type the name</string>
+    <string name="error_2">Please type the lastname</string>
+    <string name="error_3">Please type the age</string>
+</resources>

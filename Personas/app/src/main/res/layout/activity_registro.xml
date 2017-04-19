@@ -19,14 +19,13 @@
         android:layout_alignParentStart="true">
 
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textView"
             android:textStyle="normal|bold"
             android:textAlignment="center"
             android:textSize="24sp"
-            tools:text="@string/registro" />
+            android:text="@string/registro" />
 
         <EditText
             android:layout_width="match_parent"
@@ -74,24 +73,31 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="67dp">
 
             <Button
-                android:text="Button"
+                android:text="@string/registrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/cmdRegistrar"
                 android:layout_weight="1"
-                tools:text="@string/registrar"
-                style="@style/Widget.AppCompat.Button.Colored" />
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:onClick="registrar"/>
 
             <Button
-                android:text="Button"
+                android:text="@string/borrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/cmdLimpiar"
                 android:layout_weight="1"
-                tools:text="@string/borrar" />
+                android:onClick="limpiar"/>
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:id="@+id/lblmensaje"
+            android:textSize="18sp" />
+
     </LinearLayout>
 </RelativeLayout>
