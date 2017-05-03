@@ -35,7 +35,7 @@ public class Registro extends AppCompatActivity {
     public void registrar (View v){
 
         if(validar()){
-            String nombre, apellido, aux="";
+            String nombre, apellido, aux="", foto;
             int ed;
             nombre = nomb.getText().toString().trim();
             apellido = apell.getText().toString().trim();
@@ -47,8 +47,8 @@ public class Registro extends AppCompatActivity {
 
             if (internet.isChecked()) aux = aux+ ", "+res.getString(R.string.internet);
 
-
-            Persona p = new Persona(nombre, apellido, ed, aux);
+            foto = String.valueOf(aleatorio());
+            Persona p = new Persona(foto, nombre, apellido, ed, aux);
             p.guardar();
 
             //msj.setText(res.getString(R.string.mensaje));
@@ -56,6 +56,12 @@ public class Registro extends AppCompatActivity {
             limpiar();
         }
 
+    }
+
+    public int aleatorio(){
+        int fotos[] = {R.drawable.images, R.drawable.images2, R.drawable.images3};
+        int numero = (int)(Math.random() *3);
+        return  fotos[numero];
     }
 
     public void limpiar (){
