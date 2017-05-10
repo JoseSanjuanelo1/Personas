@@ -17,7 +17,7 @@ public class listadoPersona extends AppCompatActivity {
         setContentView(R.layout.activity_listado_persona);
 
         lista = (ListView)findViewById(R.id.lvListadoPersonas);
-        personas = Datos.getPersonas();
+        personas = Datos.traerPersonas(getApplicationContext());
 
         AdaptadorPersona adapter = new AdaptadorPersona(this, personas);
         lista.setAdapter(adapter);
