@@ -95,4 +95,27 @@ public class Registro extends AppCompatActivity {
         }
         return true;
     }
+
+    public boolean validarbuscar(){
+        if (nomb.getText().toString().isEmpty() ){
+            //Toast.makeText(getApplicationContext(), "Digite por favor el nombre" , Toast.LENGTH_SHORT).show();
+            nomb.setError(getResources().getString(R.string.error_1));
+            return false;
+        }
+        return true;
+    }
+
+    public void buscar (View v){
+        if (validarbuscar()){
+            String nombre;
+            Persona p;
+
+            nombre= nomb.getText().toString().trim();
+            p = Datos.buscar(getApplicationContext(), nombre);
+            if(p!=null) {
+                apell.setText(p.getApellido());
+                edad.setText("" + p.getEdad());
+            }
+        }
+    }
 }

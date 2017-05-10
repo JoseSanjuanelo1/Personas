@@ -82,4 +82,17 @@ public class Persona {
 
         //Datos.guardar(this);
     }
+
+    public void modificar(Context contexto){
+        SQLiteDatabase db;
+        String sql;
+
+        PersonasSQLiteOpenHelper aux = new PersonasSQLiteOpenHelper(contexto, "DBPersonas", null, 1);
+        db = aux.getWritableDatabase();
+
+        //FORMA 1
+
+        sql = "UPDATE Personas set apellido='"+this.getApellido()+"',edad='"+this.getEdad()+"', pasatiempo='"+this.getPasatiempo()+"'where nombre like '%"+this.getNombre()+"%'";
+        db.execSQL(sql);
+    }
 }

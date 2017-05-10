@@ -15,6 +15,9 @@
     <string name="error_1">Por favor digite el nombre</string>
     <string name="error_2">Por favor digite el apellido</string>
     <string name="error_3">Por favor digite la edad</string>
+    <string name="modificar">Modificar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="buscar">Buscar</string>
     <string name="listar">Listar</string>
     <string name="mostrar">Mostrar en Tabla</string>
     <string-array name="opciones">

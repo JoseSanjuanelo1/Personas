@@ -27,13 +27,27 @@
             android:textSize="24sp"
             android:text="@string/registro" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/txtNombre"
-            android:hint="@string/nombre" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="53dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/txtNombre"
+                android:hint="@string/nombre"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="@string/buscar"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnBuscar"
+                android:onClick="buscar" />
+        </LinearLayout>
 
         <EditText
             android:layout_width="match_parent"
@@ -73,7 +87,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="67dp">
+            android:layout_height="wrap_content">
 
             <Button
                 android:text="@string/registrar"
@@ -91,6 +105,26 @@
                 android:id="@+id/cmdLimpiar"
                 android:layout_weight="1"
                 android:onClick="limpiar"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnModificar"
+                android:layout_weight="1"
+                android:text="@string/modificar" />
+
+            <Button
+                android:text="@string/eliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnEliminar"
+                android:layout_weight="1" />
         </LinearLayout>
 
         <TextView
